@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap');
+
+:root{
+    --white: #ffffff;
+    --gray: #5d5d5d;
+    --cyan: #00e6e6;
+    --lightgray: #f9f9f9;
+    --mediumgray: #bababa;
+    --maxwidth: 1000px;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: var(--gray);
+}
+
+div.container{
+    width: 100%;
+    max-width: var(--maxwidth);
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 3em;
+}
+
+section{
+    border: solid 1px var(--gray);
+    padding: 1rem;
+}
+
+section.info{
+    border-top: solid 6px var(--cyan);
+}
+
+section h1{
+    text-transform: uppercase;
+}
+
+section h2{
+    text-transform: uppercase;
+}
+
+section a{
+    color: var(--cyan);
+}
+
+button{
+    font-size: 20px;
+    padding: 1rem;
+    border-top: solid 1px var(--mediumgray);
+    border-right: solid 1px var(--mediumgray);
+    border-left: solid 1px var(--mediumgray);
+    border-bottom: solid 1px var(--mediumgray);
+    display: inline-block;
+    margin: 2rem 1rem 0 0;
+    text-transform: uppercase;
+    background-color: var(--lightgray);
+}
+
+button.active{
+    background-color: var(--cyan);
+    border-top: solid 1px var(--cyan);
+    border-right: solid 1px var(--cyan);
+    border-left: solid 1px var(--cyan);
+    border-bottom: solid 1px var(--cyan);
+    color: var(--white);
+}
