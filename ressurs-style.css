@@ -22,24 +22,28 @@ div.container{
     padding: 3em;
 }
 
-section{
+header{
     border: solid 1px var(--gray);
     padding: 1rem;
 }
 
-section.info{
+section#info{
     border-top: solid 6px var(--cyan);
+    border-left: solid 1px var(--gray);
+    border-right: solid 1px var(--gray);
+    border-bottom: solid 1px var(--gray);
+    padding: 1rem;
 }
 
-section h1{
+section#info h1{
     text-transform: uppercase;
 }
 
-section h2{
+section#info h2{
     text-transform: uppercase;
 }
 
-section a{
+section#info a{
     color: var(--cyan);
 }
 
@@ -54,13 +58,19 @@ button{
     margin: 2rem 1rem 0 0;
     text-transform: uppercase;
     background-color: var(--lightgray);
+    color: var(--gray);
 }
 
-button.active{
+.active{
     background-color: var(--cyan);
     border-top: solid 1px var(--cyan);
     border-right: solid 1px var(--cyan);
     border-left: solid 1px var(--cyan);
     border-bottom: solid 1px var(--cyan);
     color: var(--white);
+}
+
+button:hover{
+    background-color: var(--gray);
+    color: var(--cyan);
 }

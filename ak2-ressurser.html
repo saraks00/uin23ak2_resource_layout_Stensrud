@@ -9,32 +9,27 @@
 </head>
 <body>
     <div class="container">
-        <section>
+        <header>
             <h1>Ressursarkiv</h1>
-        </section>
+        </header>
 
-        <button class="active">Kategori 1</button>
-        <button>Kategori 2</button>
-        <button>Kategori 3</button>
+        <button class="active" onclick="renderResource()">HTML</button>
+        <button onclick="renderResource()">CSS</button>
+        <button onclick="renderResource()">JavaScript</button>
+        <button onclick="renderResource()">React</button>
+        <button onclick="renderResource()">Sanity and headless CMS</button>
 
-        <section class="info">
+        <section id="info">
             <h2>Kategori 1</h2>
-
             <p>
-                Suspendisse ut tincidunt erat, eget auctor tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-                Aliquam interdum tortor vitae nisi rutrum laoreet. Phasellus bibendum est purus, ac placerat nunc porttitor quis. Proin consequat orci sit amet sapien luctus, imperdiet laoreet velit aliquam. 
+                Suspendisse ut tincidunt erat, eget auctor tellus.
             </p>
             <ul>
                 <li><a href="#">Duis auctor</a></li>
-                <li><a href="#">dictum egestas</a></li>
-                <li><a href="#">Mauris condimentum</a></li>
-                <li><a href="#">lectus quis suscipit iaculis</a></li>
-                <li><a href="#">Aenean odio libero</a></li>
-                <li><a href="#">porttitor mattis augue</a></li>
             </ul>
         </section>
     </div>
     
-    <script href="ressurser.js"></script>
+    <script src="ressurser.js"></script>
 </body>
 </html>

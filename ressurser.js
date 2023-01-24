@@ -94,3 +94,16 @@ const resources = [
         ]
     },
 ]
+
+function renderResource() {
+    let rSrcHTML = ""
+    
+    resources.map(rsrc => {rSrcHTML+= `<h2>${rsrc.category}</h2>
+    <p>${rsrc.text}</p>
+    <ul>
+        ${rsrc.sources.map(rsrc => `<li><a href=${rsrc.url}>${rsrc.title}</a></li>`)}
+    </ul>`})
+    document.querySelector("#info").innerHTML = rSrcHTML
+}
+
+renderResource()
