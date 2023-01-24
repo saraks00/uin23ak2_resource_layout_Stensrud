@@ -95,15 +95,79 @@ const resources = [
     },
 ]
 
-function renderResource() {
+function renderHTML() {
     let rSrcHTML = ""
-    
-    resources.map(rsrc => {rSrcHTML+= `<h2>${rsrc.category}</h2>
+    resources.map(rsrc => {if (rsrc.category.includes("HTML")) {rSrcHTML+= `<h2>${rsrc.category}</h2>
     <p>${rsrc.text}</p>
     <ul>
         ${rsrc.sources.map(rsrc => `<li><a href=${rsrc.url}>${rsrc.title}</a></li>`)}
-    </ul>`})
+    </ul>`}})
     document.querySelector("#info").innerHTML = rSrcHTML
+    document.querySelector("#b1").classList.add("active")
+    document.querySelector("#b4").classList.remove("active")
+    document.querySelector("#b3").classList.remove("active")
+    document.querySelector("#b2").classList.remove("active")
+    document.querySelector("#b5").classList.remove("active")
 }
 
-renderResource()
+function renderCSS() {
+    let rSrcHTML = ""
+    resources.map(rsrc => {if (rsrc.category.includes("CSS")) {rSrcHTML+= `<h2>${rsrc.category}</h2>
+    <p>${rsrc.text}</p>
+    <ul>
+        ${rsrc.sources.map(rsrc => `<li><a href=${rsrc.url}>${rsrc.title}</a></li>`)}
+    </ul>`}})
+    document.querySelector("#info").innerHTML = rSrcHTML
+    document.querySelector("#b2").classList.add("active")
+    document.querySelector("#b1").classList.remove("active")
+    document.querySelector("#b5").classList.remove("active")
+    document.querySelector("#b3").classList.remove("active")
+    document.querySelector("#b4").classList.remove("active")
+}
+
+function renderJS() {
+    let rSrcHTML = ""
+    resources.map(rsrc => {if (rsrc.category.includes("JavaScript")) {rSrcHTML+= `<h2>${rsrc.category}</h2>
+    <p>${rsrc.text}</p>
+    <ul>
+        ${rsrc.sources.map(rsrc => `<li><a href=${rsrc.url}>${rsrc.title}</a></li>`)}
+    </ul>`}})
+    document.querySelector("#info").innerHTML = rSrcHTML
+    document.querySelector("#b3").classList.add("active")
+    document.querySelector("#b2").classList.remove("active")
+    document.querySelector("#b1").classList.remove("active")
+    document.querySelector("#b4").classList.remove("active")
+    document.querySelector("#b5").classList.remove("active")
+}
+
+function renderReact() {
+    let rSrcHTML = ""
+    resources.map(rsrc => {if (rsrc.category.includes("React")) {rSrcHTML+= `<h2>${rsrc.category}</h2>
+    <p>${rsrc.text}</p>
+    <ul>
+        ${rsrc.sources.map(rsrc => `<li><a href=${rsrc.url}>${rsrc.title}</a></li>`)}
+    </ul>`}})
+    document.querySelector("#info").innerHTML = rSrcHTML
+    document.querySelector("#b4").classList.add("active")
+    document.querySelector("#b3").classList.remove("active")
+    document.querySelector("#b2").classList.remove("active")
+    document.querySelector("#b1").classList.remove("active")
+    document.querySelector("#b5").classList.remove("active")
+}
+
+function renderSanity() {
+    let rSrcHTML = ""
+    resources.map(rsrc => {if (rsrc.category.includes("Sanity and headless CMS")) {rSrcHTML+= `<h2>${rsrc.category}</h2>
+    <p>${rsrc.text}</p>
+    <ul>
+        ${rsrc.sources.map(rsrc => `<li><a href=${rsrc.url}>${rsrc.title}</a></li>`)}
+    </ul>`}})
+    document.querySelector("#info").innerHTML = rSrcHTML
+    document.querySelector("#b5").classList.add("active")
+    document.querySelector("#b4").classList.remove("active")
+    document.querySelector("#b3").classList.remove("active")
+    document.querySelector("#b2").classList.remove("active")
+    document.querySelector("#b1").classList.remove("active")
+}
+
+renderHTML()
